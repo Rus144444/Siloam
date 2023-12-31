@@ -3327,14 +3327,6 @@
             spaceBetween: 0,
             autoHeight: true,
             speed: 800,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-            },
-            scrollbar: {
-                el: ".swiper-scrollbar",
-                draggable: true
-            },
             navigation: {
                 prevEl: ".swiper-button-prev",
                 nextEl: ".swiper-button-next"
@@ -3357,6 +3349,20 @@
                     slidesPerView: 3,
                     spaceBetween: 30
                 }
+            },
+            on: {}
+        });
+        if (document.querySelector(".remont__slider")) new swiper_core_Swiper(".remont__slider", {
+            modules: [ Navigation ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            autoHeight: true,
+            speed: 800,
+            navigation: {
+                prevEl: ".remont-arrows__button-prev",
+                nextEl: ".remont-arrows__button-next"
             },
             on: {}
         });
