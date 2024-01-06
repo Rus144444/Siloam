@@ -3366,6 +3366,39 @@
             },
             on: {}
         });
+        if (document.querySelector(".action-worship__slider")) new swiper_core_Swiper(".action-worship__slider", {
+            modules: [ Navigation ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 3,
+            spaceBetween: 0,
+            autoHeight: true,
+            speed: 800,
+            navigation: {
+                prevEl: ".action-worship-arrows__swiper-button-prev",
+                nextEl: ".action-worship-arrows__swiper-button-next"
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    autoHeight: true
+                },
+                800: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                992: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                1268: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            },
+            on: {}
+        });
     }
     window.addEventListener("load", (function(e) {
         initSliders();
