@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" class="watcher webp loaded">
 
 <head>
-	<title>Siloam Szczecin | Контакты</title>
+	<title>Siloam Szczecin | Contact</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240117123416">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240124160551">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,11 +27,9 @@
 								<li class="menu__item">
 									<a class="menu__link" href="contact.html">Контакты</a>
 								</li>
-								<li class="menu__item">
-									<a class="menu__link" href="#">
-										<a href="#" data-popup="#popup" class="link"><img src="img/icons/user_header.svg" alt="Icon" /></a>
-									</a>
-								</li>
+								<!-- <li class="menu__item">
+                <a href="#" data-popup="#popup" class="link"><img src="img/icons/user_header.svg" alt="Icon"/></a>
+            </li> -->
 							</ul>
 						</nav>
 						<button type="button" class="menu__icon icon-menu">
@@ -42,56 +40,67 @@
 			</div>
 		</header>
 
-		<main class="main">
-			<section class="main__contact contact">
+		<main class="page">
+			<section class="page__contact contact">
 				<div class="contact__container">
-					<div class="contact__body">
-						<h2 class="contact__title" data-watch data-watch-threshold="0.5">
+					<div class="contact__body body-contact">
+						<h2 class="body-contact__title">
 							Контакты
 						</h2>
-						<h3 class="contact__title-sub" data-watch data-watch-threshold="0.5">
-							Адрес церкви «Siloam»
-						</h3>
-						<div class="contact__text" data-watch data-watch-threshold="0.5">
-							<p>5 Lipca 46, 70-374 Szczecin</p>
-							<div class="contact__tel">
-								<span>Телефон:</span>
-								<a class="contact__link-action" data-watch data-watch-threshold="0.5" href="tel:+48692849780"><img src="img/icons/phone_contact.svg" alt="Icon" /> +486
-									928 497 80</a>
-							</div>
-							<div class="contact__mail">
-								<span>Адрес эл.почты:</span>
-								<a class="contact__link-action" href="#"><img src="img/icons/mail_contact.svg" alt="Icon" />
-									info@siloam.com.ua</a>
-							</div>
-						</div>
-						<h3 class="contact__title-sub" data-watch data-watch-threshold="0.5">
-							Расписание богослужений церкви:
-						</h3>
-						<div class="contact__text" data-watch data-watch-threshold="0.5">
-							<span>Среда:</span>
-							<p>Молитвеное служение на 18:00</p>
-							<span>Пятница:</span>
-							<p>Молодежное служение в 18:00</p>
-							<span>Воскресение:</span>
-							<p>Воскресное служение на 11:00</p>
-						</div>
-						<h3 class="contact__title-sub" data-watch>
-							Мы в социальных сетях:
-						</h3>
-						<div class="contact__text" data-watch>
-							<a data-watch class="contact__link" href="https://www.youtube.com/channel/UCDZMGdTEtfPoKgsBrBXsFng"><picture><source srcset="img/icons/youtube.webp" type="image/webp"><img src="img/icons/youtube.png" alt="icons" /></picture> Youtube</a>
-							<a data-watch class="contact__link" href="https://www.facebook.com/siloamchurchofficial/"><picture><source srcset="img/icons/facebook.webp" type="image/webp"><img src="img/icons/facebook.png" alt="icons" /></picture> Facebook</a>
-							<a data-watch class="contact__link" href="https://www.instagram.com/explore/locations/100541459208990/siloam-szczecin/?next=%2Fcabaniasty%2Ffeed%2F&hl=de"><picture><source srcset="img/icons/instagram.webp" type="image/webp"><img src="img/icons/instagram.png" alt="icons" /></picture>
-								Instagram</a>
-							<a data-watch class="contact__link" href="https://t.me/+N9CEe5sfQrszMjc0 "><img src="img/icons/telegram.svg" alt="icons" /> Telegram</a>
-						</div>
+						<ol class="body-contact__list">
+							<li class="body-contact__item">
+								<span class="body-contact__strong">Адрес церкви «Siloam»</span>
+								<p class="body-contact__text">5 Lipca 46, 70-374 Szczecin</p>
+							</li>
+							<li class="body-contact__item">
+								<span class="body-contact__strong">Телефон:</span>
+								<p class="body-contact__text">+486 928 497 80</p>
+							</li>
+							<li class="body-contact__item">
+								<span class="body-contact__strong">Адрес эл.почты:</span>
+								<p class="body-contact__text">info@siloam.com.ua</p>
+							</li>
+						</ol>
+						<h2 class="body-contact__title">
+							Расписание богослужений
+						</h2>
+						<ol class="body-contact__list">
+							<li class="body-contact__item">
+								<span class="body-contact__strong">Понедельник:</span>
+								<p class="body-contact__text">Домашние группы 18:30</p>
+							</li>
+							<li class="body-contact__item">
+								<span class="body-contact__strong">Среда:</span>
+								<p class="body-contact__text">Молитвеное служение на 18:00</p>
+							</li>
+							<li class="body-contact__item"><span class="body-contact__strong">Пятница:</span>
+								<p class="body-contact__text">Молодежное служение в 18:00</p>
+							</li>
+							<li class="body-contact__item"><span class="body-contact__strong">Воскресение:</span>
+								<p class="body-contact__text">Воскресное служение на 11:00</p>
+							</li>
+						</ol>
+						<h2 class="body-contact__title">
+							Мы в социальных сетях
+						</h2>
+						<ol class="body-contact__list">
+							<li class="body-contact__item">
+								<a href="https://www.youtube.com/channel/UCDZMGdTEtfPoKgsBrBXsFng" class="body-contact__link"><picture><source srcset="img/icons/youtube.webp" type="image/webp"><img src="img/icons/youtube.png" alt="Icon Youtube"></picture> Youtube</a>
+							</li>
+							<li class="body-contact__item">
+								<a href="https://www.facebook.com/siloamchurchofficial" class="body-contact__link"><picture><source srcset="img/icons/facebook.webp" type="image/webp"><img src="img/icons/facebook.png" alt="Icon Facebook"></picture> Facebook</a>
+							</li>
+							<li class="body-contact__item">
+								<a href="https://www.instagram.com/explore/locations/100541459208990/siloam-szczecin/?next=%2Fcabaniasty%2Ffeed%2F&hl=de" class="body-contact__link"><picture><source srcset="img/icons/instagram.webp" type="image/webp"><img src="img/icons/instagram.png" alt="Icon Instagram"></picture> Instagram</a>
+							</li>
+							<li class="body-contact__item">
+								<a href="https://t.me/+N9CEe5sfQrszMj" class="body-contact__link"><img src="img/icons/telegram.svg" alt="Icon Telegram"> Telegram</a>
+							</li>
+						</ol>
 					</div>
 				</div>
 			</section>
-			<div class="contact__map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76062.89166770005!2d14.455630893242303!3d53.43332754843394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa09f1772a3b15%3A0xbcf1d5888e9e4d66!2zU2lsb2FtIFpiacOzciB6aWVsb25vxZt3acSFdGtvd3k!5e0!3m2!1suk!2spl!4v1704035145964!5m2!1suk!2spl" style="border: 0" width="100%" height="400px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-			</div>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.9637789488206!2d14.538031!3d53.433355899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa09f1772a3b15%3A0xbcf1d5888e9e4d66!2zU2lsb2FtIFpiacOzciB6aWVsb25vxZt3acSFdGtvd3k!5e0!3m2!1suk!2spl!4v1706026177177!5m2!1suk!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="contact__map"></iframe>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -113,7 +122,7 @@
 								<a class="three-column__mail" href="#"></a><img src="img/icons/mail.svg" alt="Icon"> siloam@gmail.com</a>
 							</li>
 							<li class="three-column__item">
-								<p>Счет для пожертвований: 42 2490 0005 0000 4530 4888 7520</p>
+								<p><span>Adres:</span> 5 Lipca 46, 70-374 Szczecin</p>
 							</li>
 							</ol>
 					</article>
@@ -125,7 +134,162 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20240117123416"></script>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__body">
+					<h3 class="popup__title">Вход в систему</h3>
+					<label class="popup__label" for="userName">Имя ползователя</label>
+					<input class="popup__input" type="name" id="userName" placeholder="Ведите ваше имя.." />
+					<label class="popup__label" for="userPassword">Пароль пользавателя</label>
+					<input class="popup__input" type="password" id="userPassword" placeholder="Ведите ваш пароль.." />
+					<div class="popup__block">
+						<button type="submit" id="submit" class="popup__submit">Зарегистрирываться</button>
+						<button data-close type="button" class="popup__close">Закрыть</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- Стилі для body -->
+	<style>
+		.lock body {
+			overflow: hidden;
+			touch-action: none;
+			overscroll-behavior: none;
+		}
+
+		.loading body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.loaded body {
+			transition: opacity 0.5s ease 0s;
+			opacity: 1;
+			visibility: visible;
+		}
+	</style>
+	<div id="fls-preloader">
+		<!-- Документація: https://template.fls.guru/template-docs/modul-preloader.html -->
+		<!-- Стилі для прелоадера -->
+		<style>
+			* {
+				padding: 0px;
+				margin: 0px;
+				border: 0px;
+			}
+
+			*,
+			*:before,
+			*:after {
+				box-sizing: border-box;
+			}
+
+			/* Головний блок */
+			.fls-preloader {
+				pointer-events: none;
+				z-index: -1;
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			/* Блок з елементами */
+			.fls-preloader__body {
+				padding: 0.93rem;
+				max-width: 31.25rem;
+				display: flex;
+				flex-direction: column;
+			}
+
+			/* Блок з лічильником */
+			.fls-preloader__counter {
+				font-size: 10rem;
+			}
+
+			/* Прогресбар */
+			.fls-preloader__line {}
+
+			/* Лінія прогресбару */
+			.fls-preloader__line span {
+				display: inline-block;
+				transition: width 0.2s ease;
+				height: 0.8rem;
+				background-color: #7A956B;
+			}
+		</style>
+		<!-- Скріпт прелоадера -->
+		<script>
+			function preloader() {
+				const preloaderImages = document.querySelector('[data-preloader]') ? document.querySelectorAll('[data-preloader] img') : document.querySelectorAll('img');
+				const preloaderContainer = document.querySelector('#fls-preloader');
+				if (preloaderImages.length) {
+					const preloaderTemplate = `
+					<div class="fls-preloader">
+						<div class="fls-preloader__body">
+							<div class="fls-preloader__counter">0%</div>
+							<div class="fls-preloader__line"><span></span></div>
+						</div>
+					</div>`;
+					document.querySelector('html').insertAdjacentHTML("beforeend", preloaderTemplate);
+
+					const
+						preloader = document.querySelector('.fls-preloader'),
+						showPecentLoad = document.querySelector('.fls-preloader__counter'),
+						showLineLoad = document.querySelector('.fls-preloader__line span'),
+						htmlDocument = document.documentElement;
+
+					let imagesLoadedCount = counter = progress = 0;
+
+					htmlDocument.classList.add('loading');
+					htmlDocument.classList.add('lock');
+
+					preloaderImages.forEach(preloaderImage => {
+						const imgClone = document.createElement('img');
+						if (imgClone) {
+							imgClone.onload = imageLoaded;
+							imgClone.onerror = imageLoaded;
+							preloaderImage.dataset.src ? imgClone.src = preloaderImage.dataset.src : imgClone.src = preloaderImage.src;
+						}
+					});
+
+					function setValueProgress(progress) {
+						showPecentLoad ? showPecentLoad.innerText = `${progress}%` : null;
+						showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
+					}
+					showPecentLoad ? setValueProgress(progress) : null;
+
+					function imageLoaded() {
+						imagesLoadedCount++;
+						progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
+						const intervalId = setInterval(() => {
+							counter >= progress ? clearInterval(intervalId) : setValueProgress(++counter);
+							counter >= 100 ? addLoadedClass() : null;
+						}, 10);
+					}
+
+					function addLoadedClass() {
+						htmlDocument.classList.add('loaded');
+						htmlDocument.classList.remove('lock');
+						htmlDocument.classList.remove('loading');
+						setInterval(() => {
+							preloader.remove();
+							preloaderContainer.remove();
+						}, 500);
+					}
+				} else {
+					preloaderContainer.remove();
+				}
+			}
+			preloader();
+		</script>
+	</div>
+	<script src="js/app.min.js?_v=20240124160551"></script>
 </body>
 
 </html>
