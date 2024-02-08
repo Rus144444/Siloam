@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240131211608">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240208214055">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,8 +64,8 @@
 						<h2 class="repair-body__title">
 							Ремонт и история нашей церкви.
 						</h2>
-						<div class="repair-body__text">
-							<p>Божьей помощю мы продвигаемся все ближе к закончению этого ремонта
+						<div data-watch data-watch-threshold="0.3" class="repair-body__text">
+							<p>С Божьей помощю мы продвигаемся все ближе к закончению этого ремонта
 								Если у вас на сердце лежит помочь нам с этим у нас открыт счет,
 								на который можно отправить пожертвования:
 								42 2490 0005 0000 4530 4888 7520
@@ -135,6 +135,11 @@
 								</div>
 							</div>
 						</div>
+						<!-- Паджинаишен слайдера  -->
+						<!-- <div class="repair-slider__bocks">
+                     <div class="repair-slider__bullets swiper-pagination"></div>
+                  </div> -->
+						<!-- Стрелки слайдера -->
 						<div class="repair-slider__arrow">
 							<button type="button" class="repair-slider__button-prev swiper-button-prev"><img src="img/icons/arrow_black.svg" alt="Arrow icon"></button>
 							<button type="button" class="repair-slider__button-next swiper-button-next"><img src="img/icons/arrow_black.svg" alt="Arrow icon"></button>
@@ -142,117 +147,108 @@
 					</div>
 				</div>
 			</section>
-			<!-- <section class="page__popular-topics popular-topics">
-            <div class="popular-topics__container">
-               <div class="popular-topics__body"> -->
-			<!-- Taby -->
-			<!-- <div data-tabs class="popular-topics__tabs">
-                     <div class="popular-topics__header">
-                        <h2 class="popular-topics__title">Popular topics</h2> -->
-			<!-- Taby menu -->
-			<!-- <nav data-tabs-titles class="popular-topics__navigation">
-                           <button type="button" class="popular-topics__label _tab-active">Проповеди</button>
-                           <button type="button" class="popular-topics__label">Worship</button>
-                           <button type="button" class="popular-topics__label">Галерея Siloam</button>
-                        </nav>
-                     </div>
-                     <div data-tabs-body class="popular-topics__content"> -->
+			<section class="page__popular-topics popular-topics">
+				<div class="popular-topics__container">
+					<div class="popular-topics__body">
+						<!-- Taby -->
+						<div data-tabs class="popular-topics__tabs">
+							<div class="popular-topics__header">
+								<h2 class="popular-topics__title">Popular topics</h2>
+								<!-- Taby menu -->
+								<nav data-tabs-titles class="popular-topics__navigation">
+									<button type="button" class="popular-topics__label _tab-active">Проповеди</button>
+									<button type="button" class="popular-topics__label">Worship</button>
+									<button type="button" class="popular-topics__label">Галерея Siloam</button>
+								</nav>
+							</div>
+							<div data-tabs-body class="popular-topics__content">
 
-			<!-- <div class="popular-topics__body body-sermons">
-                           <h3 class="body-sermons__title">Проповеди и воскресное служение</h3>
+								<div class="popular-topics__body body-sermons">
+									<h3 class="body-sermons__title">Проповеди и воскресное служение</h3>
 
-                           <div class="body-sermons__slider swiper">
-                              <div class="body-sermons__wrapper swiper-wrapper">
-                                 <div class="body-sermons__slide swiper-slide">
-                                    <video class="slide-sermons__vedio" src="img/slider_siloam/01.mp4" width="280" controls></video>
-                                 </div>
-                                 <div class="body-sermons__slide swiper-slide">
-                                    <video class="slide-sermons__vedio" src="img/slider_siloam/02.mp4" width="280" controls></video>
-                                 </div>
-                                 <div class="body-sermons__slide swiper-slide">
-                                    <video class="slide-sermons__vedio" src="img/slider_siloam/03.mp4" width="280" controls></video>
-                                 </div>
-                                 <div class="body-sermons__slide swiper-slide">
-                                    <video class="slide-sermons__vedio" src="img/slider_siloam/01.mp4" width="280" controls></video>
-                                 </div>
-                                 <div class="body-sermons__slide swiper-slide">
-                                    <video class="slide-sermons__vedio" src="img/slider_siloam/02.mp4" width="280" controls></video>
-                                 </div>
-                                 <div class="body-sermons__slide swiper-slide">
-                                    <video class="slide-sermons__vedio" src="img/slider_siloam/03.mp4" width="280" controls></video>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="body-sermons__arrow">
-                              <button type="button" class="body-sermons__slider-button-prev"><img src="img/icons/arrow_black.svg" alt="Arrow icon"></button>
-                              <button type="button" class="body-sermons__slider-button-next"><img src="img/icons/arrow_black.svg" alt="Arrow icon"></button>
-                           </div>
-                        </div>
+									<div class="body-sermons__slider swiper">
+										<div class="body-sermons__wrapper swiper-wrapper">
+											<div class="body-sermons__slide swiper-slide">
+												<video class="slide-sermons__vedio" src="img/slider_siloam/01.mp4" width="280" controls></video>
+											</div>
+											<div class="body-sermons__slide swiper-slide">
+												<video class="slide-sermons__vedio" src="img/slider_siloam/02.mp4" width="280" controls></video>
+											</div>
+											<div class="body-sermons__slide swiper-slide">
+												<video class="slide-sermons__vedio" src="img/slider_siloam/03.mp4" width="280" controls></video>
+											</div>
+											<div class="body-sermons__slide swiper-slide">
+												<video class="slide-sermons__vedio" src="img/slider_siloam/01.mp4" width="280" controls></video>
+											</div>
+											<div class="body-sermons__slide swiper-slide">
+												<video class="slide-sermons__vedio" src="img/slider_siloam/02.mp4" width="280" controls></video>
+											</div>
+											<div class="body-sermons__slide swiper-slide">
+												<video class="slide-sermons__vedio" src="img/slider_siloam/03.mp4" width="280" controls></video>
+											</div>
+										</div>
+									</div>
+									<div class="body-sermons__arrow">
+										<button type="button" class="body-sermons__slider-button-prev"><img src="img/icons/arrow_black.svg" alt="Arrow icon"></button>
+										<button type="button" class="body-sermons__slider-button-next"><img src="img/icons/arrow_black.svg" alt="Arrow icon"></button>
+									</div>
+								</div>
 
-                        <div class="popular-topics__body body-worship">
-                           <h3 class="body-worship__title">Worship Siloam</h3>
-                           
-                           <div class="body-worship__slider swiper">
-                              <div class="body-worship__wrapper swiper-wrapper">
-                                 <div class="body-worship__slide swiper-slide">
-                                    <video class="slide-worship__vedio" src="img/slider_siloam/03.mp4" width="280" controls></video>
-                                 </div>
-                                 <div class="body-worship__slide swiper-slide">
-                                    <video class="slide-worship__vedio" src="img/slider_siloam/02.mp4" width="280" controls></video>
-                                 </div>
-                                 <div class="body-worship__slide swiper-slide">
-                                    <video class="slide-worship__vedio" src="img/slider_siloam/01.mp4" width="280" controls></video>
-                                 </div>
-                                 <div class="body-worship__slide swiper-slide">
-                                    <video class="slide-worship__vedio" src="img/slider_siloam/03.mp4" width="280" controls></video>
-                                 </div>
-                                 <div class="body-worship__slide swiper-slide">
-                                    <video class="slide-worship__vedio" src="img/slider_siloam/02.mp4" width="280" controls></video>
-                                 </div>
-                                 <div class="body-worship__slide swiper-slide">
-                                    <video class="slide-worship__vedio" src="img/slider_siloam/01.mp4" width="280" controls></video>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="body-worship__arrow">
-                              <button type="button" class="body-worship__slider-button-prev"><img src="img/icons/arrow_black.svg" alt="Arrow icon"></button>
-                              <button type="button" class="body-worship__slider-button-next"><img src="img/icons/arrow_black.svg" alt="Arrow icon"></button>
-                           </div>
-                        </div> -->
+								<div class="popular-topics__body body-worship">
+									<h3 class="body-worship__title">Worship Siloam</h3>
 
-			<!-- <div class="popular-topics__body body-gallery">
-                           <h3 class="body-gallery__title">Gallery</h3>
-                           <div class="body-gallery__wrapper" data-gallery>
-                              <a href="img/gallery/01.jpeg" class="body-gallery__photo">
-                                 <picture><source srcset="img/gallery/01.webp" type="image/webp"><img alt="Image Siloam" src="img/gallery/01.jpeg" class="gallery__preview"></picture>
-                              </a>
-                              <a href="img/gallery/02.jpeg" class="body-gallery__photo">
-                                 <picture><source srcset="img/gallery/02.webp" type="image/webp"><img alt="Image Siloam" src="img/gallery/02.jpeg" class="gallery__preview"></picture>
-                              </a>
-                              <a href="img/gallery/03.jpeg" class="body-gallery__photo">
-                                 <picture><source srcset="img/gallery/03.webp" type="image/webp"><img alt="Image Siloam" src="img/gallery/03.jpeg" class="gallery__preview"></picture>
-                              </a>   
-                              <a href="img/gallery/04.jpeg" class="body-gallery__photo">
-                                 <picture><source srcset="img/gallery/04.webp" type="image/webp"><img alt="Image Siloam" src="img/gallery/04.jpeg" class="gallery__preview"></picture>
-                              </a>   
-                              <a href="img/gallery/05.jpeg" class="body-gallery__photo">
-                                 <picture><source srcset="img/gallery/05.webp" type="image/webp"><img alt="Image Siloam" src="img/gallery/05.jpeg" class="gallery__preview"></picture>
-                              </a>   
-                           </div>
-                        </div> -->
-			<!-- </div>
-                  </div>
-               </div>
-            </div>
-         </section> -->
-			<!-- <section class="page__life-church life-church">
-            <div class="life-church__container">
-               <div class="life-church__header">
-                  <h2 class="life-church__title">Жизни церкви Siloam</h2>
-               </div>
-
-            </div>
-         </section> -->
+									<div class="body-worship__slider swiper">
+										<div class="body-worship__wrapper swiper-wrapper">
+											<div class="body-worship__slide swiper-slide">
+												<video class="slide-worship__vedio" src="img/slider_siloam/03.mp4" width="280" controls></video>
+											</div>
+											<div class="body-worship__slide swiper-slide">
+												<video class="slide-worship__vedio" src="img/slider_siloam/02.mp4" width="280" controls></video>
+											</div>
+											<div class="body-worship__slide swiper-slide">
+												<video class="slide-worship__vedio" src="img/slider_siloam/01.mp4" width="280" controls></video>
+											</div>
+											<div class="body-worship__slide swiper-slide">
+												<video class="slide-worship__vedio" src="img/slider_siloam/03.mp4" width="280" controls></video>
+											</div>
+											<div class="body-worship__slide swiper-slide">
+												<video class="slide-worship__vedio" src="img/slider_siloam/02.mp4" width="280" controls></video>
+											</div>
+											<div class="body-worship__slide swiper-slide">
+												<video class="slide-worship__vedio" src="img/slider_siloam/01.mp4" width="280" controls></video>
+											</div>
+										</div>
+									</div>
+									<div class="body-worship__arrow">
+										<button type="button" class="body-worship__slider-button-prev"><img src="img/icons/arrow_black.svg" alt="Arrow icon"></button>
+										<button type="button" class="body-worship__slider-button-next"><img src="img/icons/arrow_black.svg" alt="Arrow icon"></button>
+									</div>
+								</div>
+								<div class="popular-topics__body body-gallery">
+									<h3 class="body-gallery__title">Gallery</h3>
+									<div class="body-gallery__wrapper" data-gallery>
+										<a href="img/gallery/01.jpeg" class="body-gallery__photo">
+											<picture><source srcset="img/gallery/01.webp" type="image/webp"><img alt="Image Siloam" src="img/gallery/01.jpeg" class="gallery__preview"></picture>
+										</a>
+										<a href="img/gallery/02.jpeg" class="body-gallery__photo">
+											<picture><source srcset="img/gallery/02.webp" type="image/webp"><img alt="Image Siloam" src="img/gallery/02.jpeg" class="gallery__preview"></picture>
+										</a>
+										<a href="img/gallery/03.jpeg" class="body-gallery__photo">
+											<picture><source srcset="img/gallery/03.webp" type="image/webp"><img alt="Image Siloam" src="img/gallery/03.jpeg" class="gallery__preview"></picture>
+										</a>
+										<a href="img/gallery/04.jpeg" class="body-gallery__photo">
+											<picture><source srcset="img/gallery/04.webp" type="image/webp"><img alt="Image Siloam" src="img/gallery/04.jpeg" class="gallery__preview"></picture>
+										</a>
+										<a href="img/gallery/05.jpeg" class="body-gallery__photo">
+											<picture><source srcset="img/gallery/05.webp" type="image/webp"><img alt="Image Siloam" src="img/gallery/05.jpeg" class="gallery__preview"></picture>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -441,7 +437,7 @@
 			preloader();
 		</script>
 	</div>
-	<script src="js/app.min.js?_v=20240131211608"></script>
+	<script src="js/app.min.js?_v=20240208214055"></script>
 </body>
 
 </html>

@@ -2173,7 +2173,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;
     z-index: 2;
-    padding: 6.25rem 0.9375rem 1.875rem 0.9375rem;
+    padding: 9.375rem 0.9375rem 1.875rem 0.9375rem;
     overflow: auto;
   }
 
@@ -2900,7 +2900,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .repair-slider__button-prev:hover {
-    background-color: #292b2d;
+    background-color: #495057;
   }
 
   .repair-slider__button-next.swiper-button-disabled:hover {
