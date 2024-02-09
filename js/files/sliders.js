@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from "swiper";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation} from "swiper/modules";
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -35,7 +35,7 @@ function initSliders() {
       // Вказуємо склас потрібного слайдера
       // Підключаємо модулі слайдера
       // для конкретного випадку
-      modules: [Navigation, Autoplay, Pagination],
+      modules: [Navigation, Autoplay],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
@@ -114,8 +114,8 @@ function initSliders() {
       modules: [Navigation],
       observer: true,
       observeParents: true,
-      slidesPerView: 3,
-      spaceBetween: 0,
+      slidesPerView: 1,
+      spaceBetween: 40,
       autoHeight: true,
       speed: 800,
 
@@ -155,115 +155,35 @@ function initSliders() {
       },
 
       // Брейкпоінти
-      breakpoints: {
-         320: {
-           slidesPerView: 1,
-           spaceBetween: 0,
-           autoHeight: true,
-         },
-         600: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-         },
-         601: {
-           slidesPerView: 2,
-           spaceBetween: 20,
-         },
-         930: {
-           slidesPerView: 2,
-           spaceBetween: 20,
-         },
-         931: {
-           slidesPerView: 3,
-           spaceBetween: 30,
-         },
-       },
-      // Події
-      on: {},
-    });
-  }
-
-   //   body-worship__wrapper
-  if (document.querySelector(".body-worship__slider")) {
-    // Вказуємо склас потрібного слайдера
-    // Створюємо слайдер
-    new Swiper(".body-worship__slider", {
-      // Вказуємо склас потрібного слайдера
-      // Підключаємо модулі слайдера
-      // для конкретного випадку
-      modules: [Navigation],
-      observer: true,
-      observeParents: true,
-      slidesPerView: 3,
-      spaceBetween: 0,
-      autoHeight: true,
-      speed: 800,
-
-      //touchRatio: 0,
-      //simulateTouch: false,
-      //loop: true,
-      //preloadImages: false,
-      //lazy: true,
-
-      /*
-			// Ефекти
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-      // Пагінація
-
-      // pagination: {
-      // 	el:'.remont__pagination',
-      // 	clickable: true,
-      // },
-
-      // Скроллбар
-
-      // scrollbar: {
-      // 	el: '.swiper-scrollbar',
-      // 	draggable: true,
-      // },
-
-      // // Кнопки "вліво/вправо"
-      navigation: {
-        prevEl: ".body-worship__slider-button-prev",
-        nextEl: ".body-worship__slider-button-next",
-      },
-
-      // Брейкпоінти
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          autoHeight: true,
-        },
-        600: {
-         slidesPerView: 1,
-         spaceBetween: 20,
-        },
-        601: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        930: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        931: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-      },
-
+      // breakpoints: {
+      //    320: {
+      //      slidesPerView: 1,
+      //      spaceBetween: 0,
+      //      autoHeight: true,
+      //    },
+      //    600: {
+      //     slidesPerView: 1,
+      //     spaceBetween: 20,
+      //    },
+      //    601: {
+      //      slidesPerView: 2,
+      //      spaceBetween: 20,
+      //    },
+      //    930: {
+      //      slidesPerView: 2,
+      //      spaceBetween: 20,
+      //    },
+      //    931: {
+      //      slidesPerView: 3,
+      //      spaceBetween: 30,
+      //    },
+      //  },
       // Події
       on: {},
     });
   }
 }
+
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
   let sliderScrollItems = document.querySelectorAll(".swiper_scroll");
