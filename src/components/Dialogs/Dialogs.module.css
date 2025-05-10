@@ -1,0 +1,11 @@
+.dialogs {
+  grid-area: c;
+  background: #808080;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.dialogWrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}

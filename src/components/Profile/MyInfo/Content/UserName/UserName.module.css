@@ -1,0 +1,9 @@
+.name {
+  margin: 0;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.name:not(:last-child) {
+  margin-bottom: 20px;
+}

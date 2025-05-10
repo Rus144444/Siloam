@@ -1,0 +1,11 @@
+.form {
+  grid-area: f;
+}
+.title {
+  margin: 0;
+  font-size: 25px;
+}
+
+.title:not(:last-child) {
+  margin-bottom: 20px;
+}

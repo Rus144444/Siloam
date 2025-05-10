@@ -1,0 +1,27 @@
+.profile {
+  grid-area: c;
+  background-color: #808080;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.profileWrapper {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "h h h h" "c c c c" "f f f f";
+  grid-template-rows: 200px 1fr 1fr;
+  grid-template-columns: 2fr 2fr 2fr;
+}
+
+.backgroundWrapper {
+  min-width: 100%;
+  grid-area: h;
+}
+.background {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}

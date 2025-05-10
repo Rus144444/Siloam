@@ -1,0 +1,10 @@
+.list {
+  list-style: none;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 20px;
+}

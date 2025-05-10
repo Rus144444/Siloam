@@ -1,0 +1,14 @@
+.header {
+  grid-area: h;
+  background: #808080;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 30px;
+  color: #000000;
+}

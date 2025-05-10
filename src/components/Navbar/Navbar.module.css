@@ -1,0 +1,22 @@
+.sidebar {
+  grid-area: s;
+  background: #808080;
+  padding: 20px;
+  display: flex;
+  border-radius: 5px;
+  color: #000;
+}
+
+.navMenu {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.activeLink {
+  color: rgb(189, 185, 185);
+}
+
+.navLink:not(:last-child) {
+  margin-bottom: 20px;
+}
