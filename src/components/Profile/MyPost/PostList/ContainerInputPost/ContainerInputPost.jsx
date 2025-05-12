@@ -2,8 +2,8 @@ import React from "react";
 import { Textarea } from "../../../../Textarea/Textarea";
 import { Button } from "../../../../Button/Button";
 import css from "./ContainerInputPost.css";
-import { addNewPostCreator } from "../../../../../redux/state-redux";
-import { updateNewPostTextCreator } from "../../../../../redux/state-redux";
+import { addNewPostCreator } from "../../../../../redux/profile-reducer";
+import { updateNewPostTextCreator } from "../../../../../redux/profile-reducer";
 
 export const ContainerInputPost = ({
   placeholder,

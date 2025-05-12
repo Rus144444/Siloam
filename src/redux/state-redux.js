@@ -1,7 +1,5 @@
-const ADD_POST = "ADD-POST";
-const ADD_MESSAGE = "ADD-MESSAGE";
-const UPDATE_NEW_POST_TEXT = "UPDATA-NEW-POST-TEXT";
-const UPDATE_NEW_MESSAGE_TEXT = "UPDATA-NEW-MESSAGE-TEXT";
+import { profileReducer } from "./profile-reducer";
+import { dialogReducer } from "./dialog-reducer";
 
 export const store = {
   _state: {
@@ -35,71 +33,10 @@ export const store = {
   },
 
   dispatch(action) {
-    if (action.type === ADD_POST) {
-      const newPost = {
-        post: this.getState().profile.newPost,
-        id: Math.floor(Math.random() * 1000),
-      };
-
-      this._state.profile = {
-        ...this._state.profile,
-        posts: [...this._state.profile.posts, newPost],
-        newPost: "",
-      };
-      this._callSubscriber(this._state);
-    } else if (action.type === UPDATE_NEW_POST_TEXT) {
-      this._state = {
-        ...this._state,
-        profile: {
-          ...this._state.profile,
-          newPost: action.newText,
-        },
-      };
-      this._callSubscriber(this._state);
-    } else if (action.type === ADD_MESSAGE) {
-      const newMessage = {
-        message: this._state.dialogs.newMessage,
-        id: Math.floor(Math.random() * 1000),
-      };
-
-      this._state = {
-        ...this._state,
-        dialogs: {
-          ...this._state.dialogs,
-          messages: [...this._state.dialogs.messages, newMessage],
-          newMessage: "",
-        },
-      };
-
-      this._callSubscriber(this._state);
-    } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-      this._state = {
-        ...this._state,
-        dialogs: {
-          ...this._state.dialogs,
-          newMessage: action.newMessage,
-        },
-      };
-
-      this._callSubscriber(this._state);
-    }
+    this._state.profile = profileReducer(this._state.profile, action);
+    this._state.dialogs = dialogReducer(this._state.dialogs, action);
+    this._callSubscriber();
   },
-};
-
-export const addNewPostCreator = () => {
-  return { type: ADD_POST };
-};
-
-export const updateNewPostTextCreator = (text) => {
-  return { type: UPDATE_NEW_POST_TEXT, newText: text };
-};
-
-export const addNewMessageCreator = () => {
-  return { type: ADD_MESSAGE };
-};
-
-export const updateNewMessageTextCreator = (text) => {
-  return { type: UPDATE_NEW_MESSAGE_TEXT, newMessage: text };
 };
 
 // import { createStore } from "redux";

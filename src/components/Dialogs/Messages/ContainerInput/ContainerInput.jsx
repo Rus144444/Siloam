@@ -2,8 +2,8 @@ import React from "react";
 import { Textarea } from "../../../Textarea/Textarea";
 import { Button } from "../../../Button/Button";
 import css from "./ContainerInput.module.css";
-import { addNewMessageCreator } from "../../../../redux/state-redux";
-import { updateNewMessageTextCreator } from "../../../../redux/state-redux";
+import { addNewMessageCreator } from "../../../../redux/dialog-reducer";
+import { updateNewMessageTextCreator } from "../../../../redux/dialog-reducer";
 
 export const ContainerInput = ({
   placeholder,
