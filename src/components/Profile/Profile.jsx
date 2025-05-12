@@ -4,7 +4,7 @@ import { MyPost } from "./MyPost/MyPost";
 import { MyInfo } from "./MyInfo/MyInfo";
 import { Img } from "../Img/Img";
 
-export const Profile = ({ posts, addPost, onNewPostChange }) => {
+export const Profile = ({ posts, dispatch }) => {
   return (
     <div className={css.profile}>
       <div className={css.profileWrapper}>
@@ -12,11 +12,7 @@ export const Profile = ({ posts, addPost, onNewPostChange }) => {
           <Img className={css.background} src={background} alt="background" />
         </div>
         <MyInfo />
-        <MyPost
-          posts={posts}
-          addPost={addPost}
-          onNewPostChange={onNewPostChange}
-        />
+        <MyPost posts={posts} dispatch={dispatch} />
       </div>
     </div>
   );

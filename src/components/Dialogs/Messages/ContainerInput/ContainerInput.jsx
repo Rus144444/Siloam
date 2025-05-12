@@ -1,27 +1,25 @@
 import React from "react";
-import { Textarea } from "../Textarea/Textarea";
-import { Button } from "../Button/Button";
+import { Textarea } from "../../../Textarea/Textarea";
+import { Button } from "../../../Button/Button";
 import css from "./ContainerInput.module.css";
+import { addNewMessageCreator } from "../../../../redux/state-redux";
+import { updateNewMessageTextCreator } from "../../../../redux/state-redux";
 
 export const ContainerInput = ({
   placeholder,
   titleButton,
   newMessage,
-  onTextChange,
-  onSubmit,
+  dispatch,
 }) => {
   const inputRef = React.createRef();
 
   const handleSubmit = () => {
-    const text = inputRef.current.value.trim();
-    if (text !== "") {
-      onSubmit(text);
-    }
+    dispatch(addNewMessageCreator());
   };
 
   const handleChange = () => {
     const text = inputRef.current.value;
-    onTextChange(text);
+    dispatch(updateNewMessageTextCreator(text));
   };
 
   return (

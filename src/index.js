@@ -1,11 +1,4 @@
-import {
-  initialState,
-  onNewPostChange,
-  addMessage,
-  addPost,
-  subscribe,
-  onNewMessageChange,
-} from "./redux/state-redux";
+import { store } from "./redux/state-redux";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
@@ -15,17 +8,11 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 export let rerenderEntireTree = (state) => {
   root.render(
     <React.StrictMode>
-      <App
-        store={state}
-        addMessage={addMessage}
-        addPost={addPost}
-        onNewPostChange={onNewPostChange}
-        onNewMessageChange={onNewMessageChange}
-      />
+      <App store={store} />
     </React.StrictMode>
   );
 };
 
-rerenderEntireTree(initialState);
+rerenderEntireTree(store.getState());
 
-subscribe(rerenderEntireTree);
+store._subscribe(rerenderEntireTree);

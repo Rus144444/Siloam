@@ -1,16 +1,15 @@
 import css from "./MyPost.module.css";
-import { ContainerInput } from "../../ContainerInput/ContainerInput";
+import { ContainerInputPost } from "./PostList/ContainerInputPost/ContainerInputPost";
 import { PostList } from "./PostList/PostList";
 
-export const MyPost = ({ posts, addPost, onNewPostChange }) => {
+export const MyPost = ({ posts, dispatch }) => {
   return (
     <div className={css.form}>
-      <ContainerInput
+      <ContainerInputPost
         placeholder="Add new post.."
         titleButton="Add post"
         newMessage={posts.newPost}
-        onTextChange={onNewPostChange}
-        onSubmit={addPost}
+        dispatch={dispatch}
       />
       <h3 className={css.title}>My post..</h3>
       <PostList posts={posts} />

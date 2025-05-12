@@ -6,16 +6,7 @@ import { Footer } from "./components/Footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import css from "./App.module.css";
 
-function App({
-  store,
-  addPost,
-  addMessage,
-  onNewPostChange,
-  onNewMessageChange,
-}) {
-  //   if (!store || !store.profile || !store.profile.posts) {
-  //     return <div>Loading...</div>;
-  //   }
+function App({ store }) {
   return (
     <BrowserRouter>
       <div className={css.wrapper}>
@@ -27,9 +18,8 @@ function App({
               path="/profile"
               element={
                 <Profile
-                  posts={store.profile}
-                  addPost={addPost}
-                  onNewPostChange={onNewPostChange}
+                  posts={store._state.profile}
+                  dispatch={store.dispatch.bind(store)}
                 />
               }
             />
@@ -37,9 +27,8 @@ function App({
               path="/dialogs"
               element={
                 <Dialogs
-                  dialogs={store.dialogs}
-                  addMessage={addMessage}
-                  onNewMessageChange={onNewMessageChange}
+                  dialogs={store._state.dialogs}
+                  dispatch={store.dispatch.bind(store)}
                 />
               }
             />
