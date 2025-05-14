@@ -28,7 +28,7 @@ export const store = {
     console.log("State was changed");
   },
 
-  _subscribe(observer) {
+  subscribe(observer) {
     this._callSubscriber = observer;
   },
 
@@ -38,11 +38,3 @@ export const store = {
     this._callSubscriber();
   },
 };
-
-// import { createStore } from "redux";
-
-// const rootReducer = (state = initialState, action) => {
-//   return state;
-// };
-
-// export const store = createStore(rootReducer);

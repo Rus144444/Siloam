@@ -6,7 +6,7 @@ import { Footer } from "./components/Footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import css from "./App.module.css";
 
-function App({ store }) {
+function App({ store, dispatch }) {
   return (
     <BrowserRouter>
       <div className={css.wrapper}>
@@ -16,21 +16,11 @@ function App({ store }) {
           <Routes>
             <Route
               path="/profile"
-              element={
-                <Profile
-                  posts={store._state.profile}
-                  dispatch={store.dispatch.bind(store)}
-                />
-              }
+              element={<Profile posts={store.profile} dispatch={dispatch} />}
             />
             <Route
               path="/dialogs"
-              element={
-                <Dialogs
-                  dialogs={store._state.dialogs}
-                  dispatch={store.dispatch.bind(store)}
-                />
-              }
+              element={<Dialogs dialogs={store.dialogs} dispatch={dispatch} />}
             />
           </Routes>
         </div>
