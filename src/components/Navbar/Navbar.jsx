@@ -25,9 +25,16 @@ export const Navbar = () => {
             Message
           </NavLink>
         </div>
-        <a href="4" className={css.navLink}>
-          Fund users
-        </a>
+        <div className={css.navLink}>
+          <NavLink
+            to="/users"
+            className={({ isActive }) =>
+              isActive ? `${css.navLink} ${css.activeLink}` : css.navLink
+            }
+          >
+            Users
+          </NavLink>
+        </div>
         <a href="4" className={css.navLink}>
           Setting
         </a>

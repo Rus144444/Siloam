@@ -1,19 +1,32 @@
-import { Message } from "./Message/Message";
-import { ContainerInput } from "./ContainerInput/ContainerInput";
+import React from "react";
 import css from "./Messages.module.css";
+import { Button } from "../../Button/Button";
+import { Textarea } from "../../Textarea/Textarea";
 
-export const Messages = ({ dialogs, dispatch }) => {
+export const Messages = ({
+  newMessage,
+  handleChange,
+  handleSubmit,
+  inputRef,
+}) => {
+  const onMessageSubmit = () => {
+    handleSubmit();
+  };
+
+  const onMessageChange = () => {
+    const text = inputRef.current.value;
+    handleChange(text);
+  };
+
   return (
-    <div className={css.list}>
-      {dialogs.messages.map(({ message, id }) => (
-        <Message key={id}>{message}</Message>
-      ))}
-      <ContainerInput
+    <div className={css.wrapper}>
+      <Textarea
+        handleChange={onMessageChange}
         placeholder="Enter your message..."
-        titleButton="Send"
-        newMessage={dialogs.newMessage}
-        dispatch={dispatch}
+        newMessage={newMessage}
+        ref={inputRef}
       />
+      <Button onClick={onMessageSubmit}>Send</Button>
     </div>
   );
 };

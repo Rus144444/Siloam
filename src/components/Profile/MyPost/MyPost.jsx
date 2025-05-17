@@ -1,18 +1,28 @@
+import React from "react";
 import css from "./MyPost.module.css";
-import { ContainerInputPost } from "./PostList/ContainerInputPost/ContainerInputPost";
-import { PostList } from "./PostList/PostList";
+import { Textarea } from "../../Textarea/Textarea";
+import { Button } from "../../Button/Button";
 
-export const MyPost = ({ posts, dispatch }) => {
+export const MyPost = ({ newPost, handleSubmit, handleChange, inputRef }) => {
+  const onPostSubmit = () => {
+    handleSubmit();
+  };
+
+  const onPostChange = () => {
+    handleChange();
+  };
+
   return (
     <div className={css.form}>
-      <ContainerInputPost
-        placeholder="Add new post.."
-        titleButton="Add post"
-        newMessage={posts.newPost}
-        dispatch={dispatch}
-      />
-      <h3 className={css.title}>My post..</h3>
-      <PostList posts={posts} />
+      <div className={css.wrapper}>
+        <Textarea
+          handleChange={onPostChange}
+          placeholder="Add new post.."
+          newMessage={newPost}
+          ref={inputRef}
+        />
+        <Button onClick={onPostSubmit}>Add post</Button>
+      </div>
     </div>
   );
 };

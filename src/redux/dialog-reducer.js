@@ -10,26 +10,26 @@ const initialState = {
 };
 
 export const dialogReducer = (state = initialState, action) => {
-  if (action.type === ADD_MESSAGE) {
-    const newMessage = {
-      message: state.newMessage,
-      id: Math.floor(Math.random() * 1000),
-    };
-    return {
-      ...state,
-      messages: [...state.messages, newMessage],
-      newMessage: "",
-    };
-  }
+  switch (action.type) {
+    case ADD_MESSAGE:
+      const newMessage = {
+        message: state.newMessage,
+        id: Math.floor(Math.random() * 1000),
+      };
+      return {
+        ...state,
+        messages: [...state.messages, newMessage],
+        newMessage: "",
+      };
+    case UPDATE_NEW_MESSAGE_TEXT:
+      return {
+        ...state,
+        newMessage: action.newMessage,
+      };
 
-  if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-    return {
-      ...state,
-      newMessage: action.newMessage,
-    };
+    default:
+      return state;
   }
-
-  return state;
 };
 
 export const addNewMessageCreator = () => ({ type: ADD_MESSAGE });

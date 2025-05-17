@@ -1,10 +1,10 @@
 import css from "./Profile.module.css";
 import background from "../../images/images.jpeg";
-import { MyPost } from "./MyPost/MyPost";
+import { MyPostContainer } from "./MyPost/MyPostContainer";
 import { MyInfo } from "./MyInfo/MyInfo";
 import { Img } from "../Img/Img";
 
-export const Profile = ({ posts, dispatch }) => {
+export const Profile = () => {
   return (
     <div className={css.profile}>
       <div className={css.profileWrapper}>
@@ -12,7 +12,7 @@ export const Profile = ({ posts, dispatch }) => {
           <Img className={css.background} src={background} alt="background" />
         </div>
         <MyInfo />
-        <MyPost posts={posts} dispatch={dispatch} />
+        <MyPostContainer />
       </div>
     </div>
   );
