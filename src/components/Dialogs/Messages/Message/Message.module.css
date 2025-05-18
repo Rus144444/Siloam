@@ -1,9 +1,12 @@
 .message {
-  width: 300px;
+  width: 400px;
+  text-wrap: wrap;
   background-color: #000000b4;
   border-radius: 10px;
   padding: 10px;
   color: #ffffffaa;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .wrapperIcon {
